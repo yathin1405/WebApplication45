@@ -1,0 +1,98 @@
+﻿@model WebApplication45.Models.AdminFlight
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>AdminFlight</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Airways)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Airways)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FROM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FROM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SeatType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SeatType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DepartureDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DepartureDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DepartureTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DepartureTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Flight_Duration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Flight_Duration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FDelay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FDelay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Flight_Delay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Flight_Delay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.UserID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

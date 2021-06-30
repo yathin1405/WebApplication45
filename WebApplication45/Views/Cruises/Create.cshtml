@@ -1,0 +1,108 @@
+﻿@model WebApplication45.Models.Cruise
+
+@{
+    ViewBag.Title = "Create a cruise";
+}
+
+
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal">
+    <h2>Cruise</h2>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(model => model.ShipName, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EnumDropDownListFor(model => model.ShipName, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.ShipName, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.FROM, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EnumDropDownListFor(model => model.FROM, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.FROM, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.TO, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EnumDropDownListFor(model => model.TO, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.TO, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    @*<div class="form-group">
+            @Html.LabelFor(model => model.Ship_Name, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Ship_Name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Ship_Name, "", new { @class = "text-danger" })
+            </div>
+        </div>*@
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Cruise_Duration, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(model => model.Cruise_Duration, new SelectListItem[]
+          {
+          new SelectListItem() { Text="1 Night", Value="1 Night"},
+          new SelectListItem() { Text="2 Days & 1 Night", Value="2 Days & 1 Night"},
+          new SelectListItem() { Text="3 Days & 2 Nights", Value="3 Days & 2 Nights"},
+          new SelectListItem() { Text="4 Days & 3 Nights", Value="4 Days & 3 Nights"},
+          }, "Select Duration")
+
+        </div>
+    </div>
+
+    @*<div class="form-group">
+            @Html.LabelFor(model => model.Num_Guests, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Num_Guests, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Num_Guests, "", new { @class = "text-danger" })
+            </div>
+        </div>*@
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Departure_Date, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Departure_Date, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Departure_Date, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.DepartureTime, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(model => model.DepartureTime, new SelectListItem[]
+          {
+          new SelectListItem() { Text="06:00", Value="6:00:00"},
+          new SelectListItem() { Text="08:00", Value="8:00:00"},
+          new SelectListItem() { Text="10:00", Value="10:00:00"},
+          new SelectListItem() { Text="12:00", Value="12:00:00"},
+          }, "Select Time")
+            @Html.ValidationMessageFor(model => model.DepartureTime, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Create" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

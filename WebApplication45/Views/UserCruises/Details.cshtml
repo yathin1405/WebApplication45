@@ -1,0 +1,122 @@
+﻿@model WebApplication45.Models.UserCruise
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>UserCruise</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Ship_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ship_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FROM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FROM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cruise_Duration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cruise_Duration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Num_Adults)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Num_Adults)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Num_Kids)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Num_Kids)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Departure_Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Departure_Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ship_Fee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ship_Fee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Discount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Discount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Total)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Total)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CruiseID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,122 @@
+﻿@model WebApplication45.Models.UserQuote
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>UserQuote</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TourL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TourL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmailAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmailAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumAdults)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumAdults)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumKids)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumKids)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DepartureDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DepartureDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReturnDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReturnDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hotels)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hotels)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tours)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tours)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cruises)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cruises)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Flights)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Flights)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.UserID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,105 @@
+﻿@model IEnumerable<WebApplication45.Models.UserCruise>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Ship_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FROM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cruise_Duration)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Num_Adults)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Num_Kids)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Departure_Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ship_Fee)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Discount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Total)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ship_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FROM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cruise_Duration)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Num_Adults)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Num_Kids)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Departure_Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ship_Fee)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Discount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Total)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CruiseID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CruiseID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CruiseID })
+        </td>
+    </tr>
+}
+
+</table>
